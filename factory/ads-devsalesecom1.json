@@ -1,0 +1,9 @@
+{
+	"name": "ads-devsalesecom1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d069b531-7ae7-49b2-b6da-dece29d58f96",
+		"tenantId": "b49de880-2eec-457e-a4f0-a67e53653c17"
+	}
+}
