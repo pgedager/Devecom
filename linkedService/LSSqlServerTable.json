@@ -1,0 +1,17 @@
+{
+	"name": "LSSqlServerTable",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Sql to parquet convert",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=DESKTOP-4HK1C66;initial catalog=Salesecom;user id=Dheera",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxNzAyZDA3OS03N2QxLTQyYWQtYjkwMS1hYzg5ZDZlOGZlNzEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
