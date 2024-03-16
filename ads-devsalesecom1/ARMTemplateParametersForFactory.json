@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ads-devsalesecom1"
+		},
+		"LSSqlServerTable_connectionString": {
+			"value": ""
+		},
+		"LS_sql_parquet_accountKey": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://devecom.vault.azure.net/"
+		},
+		"LS_sql_parquet_properties_typeProperties_url": {
+			"value": "https://adlssidevecom.dfs.core.windows.net/"
+		}
+	}
+}
