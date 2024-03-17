@@ -1,0 +1,24 @@
+{
+	"name": "evnt_manualcsv",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_adls_parquet",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/manualfilepayment/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/d1768bd3-74fc-45e2-9904-61be287ad1c2/resourceGroups/rg_devecom/providers/Microsoft.Storage/storageAccounts/adlsrawdevecom",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
