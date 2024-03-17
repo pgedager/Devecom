@@ -11,6 +11,18 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LSSqlServerTable'"
 		},
+		"LS_Manualcsv_parquet1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Manualcsv_parquet1'"
+		},
+		"LS_manualcsv_parquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_manualcsv_parquet'"
+		},
+		"LS_restapi_parquet_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_restapi_parquet'"
+		},
 		"LS_sql_parquet_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_sql_parquet'"
@@ -19,9 +31,29 @@
 			"type": "string",
 			"defaultValue": "https://devecom.vault.azure.net/"
 		},
+		"LS_Manualcsv_parquet1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssidevecom.dfs.core.windows.net/"
+		},
+		"LS_manualcsv_parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsrawdevecom.dfs.core.windows.net/"
+		},
+		"LS_restapi_parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssidevecom.dfs.core.windows.net/"
+		},
+		"LS_restapt_parquet_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://retoolapi.dev/smdCCy/data"
+		},
 		"LS_sql_parquet_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlssidevecom.dfs.core.windows.net/"
+		},
+		"evnt_manualcsv_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/d1768bd3-74fc-45e2-9904-61be287ad1c2/resourceGroups/rg_devecom/providers/Microsoft.Storage/storageAccounts/adlsrawdevecom"
 		},
 		"containerUri": {
 			"type": "string",
@@ -50,6 +82,15 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"LS_Manualcsv_parquet1_accountKey": {
+						"value": "[parameters('LS_Manualcsv_parquet1_accountKey')]"
+					},
+					"LS_manualcsv_parquet_accountKey": {
+						"value": "[parameters('LS_manualcsv_parquet_accountKey')]"
+					},
+					"LS_restapi_parquet_accountKey": {
+						"value": "[parameters('LS_restapi_parquet_accountKey')]"
+					},
 					"LS_sql_parquet_accountKey": {
 						"value": "[parameters('LS_sql_parquet_accountKey')]"
 					},
@@ -59,12 +100,47 @@
 					"AzureKeyVault1_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 					},
+					"LS_Manualcsv_parquet1_properties_typeProperties_url": {
+						"value": "[parameters('LS_Manualcsv_parquet1_properties_typeProperties_url')]"
+					},
+					"LS_manualcsv_parquet_properties_typeProperties_url": {
+						"value": "[parameters('LS_manualcsv_parquet_properties_typeProperties_url')]"
+					},
+					"LS_restapi_parquet_properties_typeProperties_url": {
+						"value": "[parameters('LS_restapi_parquet_properties_typeProperties_url')]"
+					},
+					"LS_restapt_parquet_properties_typeProperties_url": {
+						"value": "[parameters('LS_restapt_parquet_properties_typeProperties_url')]"
+					},
 					"LS_sql_parquet_properties_typeProperties_url": {
 						"value": "[parameters('LS_sql_parquet_properties_typeProperties_url')]"
+					},
+					"evnt_manualcsv_properties_typeProperties_scope": {
+						"value": "[parameters('evnt_manualcsv_properties_typeProperties_scope')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "ads-devsalesecom1_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ads-devsalesecom1_ArmTemplate_0')]"
+			]
 		}
 	]
 }

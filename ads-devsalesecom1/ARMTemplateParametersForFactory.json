@@ -8,14 +8,38 @@
 		"LSSqlServerTable_connectionString": {
 			"value": ""
 		},
+		"LS_Manualcsv_parquet1_accountKey": {
+			"value": ""
+		},
+		"LS_manualcsv_parquet_accountKey": {
+			"value": ""
+		},
+		"LS_restapi_parquet_accountKey": {
+			"value": ""
+		},
 		"LS_sql_parquet_accountKey": {
 			"value": ""
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://devecom.vault.azure.net/"
 		},
+		"LS_Manualcsv_parquet1_properties_typeProperties_url": {
+			"value": "https://adlssidevecom.dfs.core.windows.net/"
+		},
+		"LS_manualcsv_parquet_properties_typeProperties_url": {
+			"value": "https://adlsrawdevecom.dfs.core.windows.net/"
+		},
+		"LS_restapi_parquet_properties_typeProperties_url": {
+			"value": "https://adlssidevecom.dfs.core.windows.net/"
+		},
+		"LS_restapt_parquet_properties_typeProperties_url": {
+			"value": "https://retoolapi.dev/smdCCy/data"
+		},
 		"LS_sql_parquet_properties_typeProperties_url": {
 			"value": "https://adlssidevecom.dfs.core.windows.net/"
+		},
+		"evnt_manualcsv_properties_typeProperties_scope": {
+			"value": "/subscriptions/d1768bd3-74fc-45e2-9904-61be287ad1c2/resourceGroups/rg_devecom/providers/Microsoft.Storage/storageAccounts/adlsrawdevecom"
 		}
 	}
 }
