@@ -11,6 +11,12 @@
 		"LS_Manualcsv_parquet1_accountKey": {
 			"value": ""
 		},
+		"LS_blob_parquet_connectionString": {
+			"value": ""
+		},
+		"LS_blobscv_parquet_accountKey": {
+			"value": ""
+		},
 		"LS_manualcsv_parquet_accountKey": {
 			"value": ""
 		},
@@ -24,6 +30,9 @@
 			"value": "https://devecom.vault.azure.net/"
 		},
 		"LS_Manualcsv_parquet1_properties_typeProperties_url": {
+			"value": "https://adlssidevecom.dfs.core.windows.net/"
+		},
+		"LS_blobscv_parquet_properties_typeProperties_url": {
 			"value": "https://adlssidevecom.dfs.core.windows.net/"
 		},
 		"LS_manualcsv_parquet_properties_typeProperties_url": {
