@@ -1,0 +1,22 @@
+{
+	"name": "DS_blob_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_blob_parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "product"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
