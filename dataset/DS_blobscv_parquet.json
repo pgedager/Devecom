@@ -1,0 +1,19 @@
+{
+	"name": "DS_blobscv_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_blobscv_parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "products"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
