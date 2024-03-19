@@ -5,7 +5,13 @@
 		"factoryName": {
 			"value": "ads-devsalesecom1"
 		},
+		"DS_sql_parquetorder_accountKey": {
+			"value": ""
+		},
 		"LSSqlServerTable_connectionString": {
+			"value": ""
+		},
+		"LS_DS_Sql_parquetordersink_accountKey": {
 			"value": ""
 		},
 		"LS_Manualcsv_parquet1_accountKey": {
@@ -26,8 +32,17 @@
 		"LS_sql_parquet_accountKey": {
 			"value": ""
 		},
+		"LS_sql_parquetorder_connectionString": {
+			"value": ""
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://devecom.vault.azure.net/"
+		},
+		"DS_sql_parquetorder_properties_typeProperties_url": {
+			"value": "https://adlssidevecom.dfs.core.windows.net/"
+		},
+		"LS_DS_Sql_parquetordersink_properties_typeProperties_url": {
+			"value": "https://adlssidevecom.dfs.core.windows.net/"
 		},
 		"LS_Manualcsv_parquet1_properties_typeProperties_url": {
 			"value": "https://adlssidevecom.dfs.core.windows.net/"

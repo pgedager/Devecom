@@ -7,9 +7,17 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ads-devsalesecom1"
 		},
+		"DS_sql_parquetorder_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_sql_parquetorder'"
+		},
 		"LSSqlServerTable_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LSSqlServerTable'"
+		},
+		"LS_DS_Sql_parquetordersink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_DS_Sql_parquetordersink'"
 		},
 		"LS_Manualcsv_parquet1_accountKey": {
 			"type": "secureString",
@@ -35,9 +43,21 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_sql_parquet'"
 		},
+		"LS_sql_parquetorder_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_sql_parquetorder'"
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://devecom.vault.azure.net/"
+		},
+		"DS_sql_parquetorder_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssidevecom.dfs.core.windows.net/"
+		},
+		"LS_DS_Sql_parquetordersink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlssidevecom.dfs.core.windows.net/"
 		},
 		"LS_Manualcsv_parquet1_properties_typeProperties_url": {
 			"type": "string",
@@ -94,6 +114,12 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"DS_sql_parquetorder_accountKey": {
+						"value": "[parameters('DS_sql_parquetorder_accountKey')]"
+					},
+					"LS_DS_Sql_parquetordersink_accountKey": {
+						"value": "[parameters('LS_DS_Sql_parquetordersink_accountKey')]"
+					},
 					"LS_Manualcsv_parquet1_accountKey": {
 						"value": "[parameters('LS_Manualcsv_parquet1_accountKey')]"
 					},
@@ -112,11 +138,14 @@
 					"LS_sql_parquet_accountKey": {
 						"value": "[parameters('LS_sql_parquet_accountKey')]"
 					},
-					"LSSqlServerTable_connectionString": {
-						"value": "[parameters('LSSqlServerTable_connectionString')]"
-					},
 					"AzureKeyVault1_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"DS_sql_parquetorder_properties_typeProperties_url": {
+						"value": "[parameters('DS_sql_parquetorder_properties_typeProperties_url')]"
+					},
+					"LS_DS_Sql_parquetordersink_properties_typeProperties_url": {
+						"value": "[parameters('LS_DS_Sql_parquetordersink_properties_typeProperties_url')]"
 					},
 					"LS_Manualcsv_parquet1_properties_typeProperties_url": {
 						"value": "[parameters('LS_Manualcsv_parquet1_properties_typeProperties_url')]"
@@ -153,6 +182,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"LSSqlServerTable_connectionString": {
+						"value": "[parameters('LSSqlServerTable_connectionString')]"
+					},
+					"LS_sql_parquetorder_connectionString": {
+						"value": "[parameters('LS_sql_parquetorder_connectionString')]"
 					},
 					"evnt_manualcsv_properties_typeProperties_scope": {
 						"value": "[parameters('evnt_manualcsv_properties_typeProperties_scope')]"
