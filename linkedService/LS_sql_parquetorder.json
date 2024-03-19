@@ -1,0 +1,16 @@
+{
+	"name": "LS_sql_parquetorder",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=DESKTOP-4HK1C66;initial catalog=Salesecom;user id=Dheera",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwODJlNzBmMy01NjcwLTQ3MDUtYTM5Ny1hOTUwZjlhYTcxMzAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
