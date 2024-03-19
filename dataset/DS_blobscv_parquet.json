@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "products"
+				"folderPath": "product",
+				"fileSystem": "output"
 			},
 			"compressionCodec": "snappy"
 		},
